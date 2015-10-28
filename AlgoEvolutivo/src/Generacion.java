@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author Santiago
+ *
+ */
 public class Generacion 
 {	
 	/**
@@ -5,6 +10,10 @@ public class Generacion
 	 */
 	private Individuo[] individuos;
 
+	/**
+	 * Transicion que se elijio para el transporte prioritario en este generacion
+	 */
+	private Transicion fase;
 	
 	/**
 	 * 
@@ -40,6 +49,20 @@ public class Generacion
 	public void setIndividuos(Individuo[] individuos) 
 	{
 		this.individuos = individuos;
+	}
+
+	/**
+	 * @return the fase
+	 */
+	public Transicion getFase() {
+		return fase;
+	}
+
+	/**
+	 * @param fase the fase to set
+	 */
+	public void setFase(Transicion fase) {
+		this.fase = fase;
 	}
 		
 }

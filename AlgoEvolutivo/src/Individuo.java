@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author Santiago
+ *
+ */
 public class Individuo 
 {
 	/**
