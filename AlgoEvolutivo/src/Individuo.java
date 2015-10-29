@@ -30,10 +30,23 @@ public class Individuo
 	 */
 	private int destino;
 	
+	/**
+	 * Orden de llegada
+	 */
+	private int ordenLlegada;
+	
+	/**
+	 * 
+	 */
+	private boolean destinoInalcanzable;
+
+	
 	public Individuo()
 	{
 		cromosoma = new int[Constantes.MAX_LONG];
+		destinoInalcanzable = false;
 	}
+	
 
 	/**
 	 * @return the cromosoma
@@ -118,5 +131,33 @@ public class Individuo
 	 */
 	public void setPenalizacion(int penalizacion) {
 		this.penalizacion = penalizacion;
+	}
+
+	/**
+	 * @return the ordenLlegada
+	 */
+	public int getOrdenLlegada() {
+		return ordenLlegada;
+	}
+
+	/**
+	 * @param ordenLlegada the ordenLlegada to set
+	 */
+	public void setOrdenLlegada(int ordenLlegada) {
+		this.ordenLlegada = ordenLlegada;
+	}
+	
+	/**
+	 * @return the destinoInalcanzable
+	 */
+	public boolean isDestinoInalcanzable() {
+		return destinoInalcanzable;
+	}
+
+	/**
+	 * @param destinoInalcanzable the destinoInalcanzable to set
+	 */
+	public void setDestinoInalcanzable(boolean destinoInalcanzable) {
+		this.destinoInalcanzable = destinoInalcanzable;
 	}
 }
