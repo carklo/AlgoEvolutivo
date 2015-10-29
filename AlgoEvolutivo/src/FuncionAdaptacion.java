@@ -14,7 +14,7 @@ public class FuncionAdaptacion
 	 * @param individuos
 	 * @param gen
 	 */
-	public FuncionAdaptacion(Generacion gen)
+	public FuncionAdaptacion(Generacion gen, int numGen)
 	{
 		generacionActual = gen;
 	}
@@ -178,6 +178,11 @@ public class FuncionAdaptacion
 	public void calcularCongestionDestino()
 	{
 		marcarDestInalcanzables();
+		ArrayList<Individuo> indiNodo1 = generacionActual.getIndividuosNodo1();
+		ArrayList<Individuo> indiNodo2 = generacionActual.getIndividuosNodo2();
+		ArrayList<Individuo> indiNodo3 = generacionActual.getIndividuosNodo3();
+		ArrayList<Individuo> indiNodo4 = generacionActual.getIndividuosNodo4();
+		
 		
 	}
 	

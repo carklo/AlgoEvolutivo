@@ -48,6 +48,48 @@ public class Generacion
 	private ArrayList<Individuo> individuosMutados;
 	
 	/**
+	 * Individuos que en esta generacion lograron cruzar en el nodo
+	 */
+	private ArrayList<Individuo> individuosTransferidosNodo1;
+	
+	/**
+	 * 
+	 */
+	private ArrayList<Individuo> individuosTransferidosNodo2;
+	
+	/**
+	 * 
+	 */
+	private ArrayList<Individuo> individuosTranferidosNodo3;
+	
+	/**
+	 * 
+	 */
+	private ArrayList<Individuo> individuosTransferidosNodo4;
+	
+	/**
+	 * 
+	 */
+	private ArrayList<Individuo> individuosRemanentesNodo1;
+	
+	/**
+	 * 
+	 */
+	private ArrayList<Individuo> individuosRemanentesNodo2;
+	
+	/**
+	 * 
+	 */
+	private ArrayList<Individuo> individuosRemanentesNodo3;
+	
+	/**
+	 * 
+	 */
+	private ArrayList<Individuo> individuosRemanentesNodo4;
+	
+	
+
+	/**
 	 * 
 	 * @param NumIndividuos
 	 */
@@ -100,6 +142,32 @@ public class Generacion
 			{
 				individuosNodo4.add(in);
 			}
+		}
+	}
+	
+	public void calcularIndividuosTransferidos(int nodoOrigen)
+	{
+		if(nodoOrigen == 1)
+		{
+			for (Individuo individuo : individuosNodo1) 
+			{
+				if(individuo.isTransferido())
+				{
+					
+				}
+			}
+		}
+		else if(nodoOrigen == 2)
+		{
+			
+		}
+		else if(nodoOrigen == 3)
+		{
+			
+		}
+		else
+		{
+			
 		}
 	}
 	
@@ -271,5 +339,116 @@ public class Generacion
 		this.individuosNodo3 = individuosNodo3;
 	}
 
+	/**
+	 * @return the individuosTransferidosNodo1
+	 */
+	public ArrayList<Individuo> getIndividuosTransferidosNodo1() {
+		return individuosTransferidosNodo1;
+	}
+
+	/**
+	 * @param individuosTransferidosNodo1 the individuosTransferidosNodo1 to set
+	 */
+	public void setIndividuosTransferidosNodo1(ArrayList<Individuo> individuosTransferidosNodo1) {
+		this.individuosTransferidosNodo1 = individuosTransferidosNodo1;
+	}
+
+	/**
+	 * @return the individuosTransferidosNodo2
+	 */
+	public ArrayList<Individuo> getIndividuosTransferidosNodo2() {
+		return individuosTransferidosNodo2;
+	}
+
+	/**
+	 * @param individuosTransferidosNodo2 the individuosTransferidosNodo2 to set
+	 */
+	public void setIndividuosTransferidosNodo2(ArrayList<Individuo> individuosTransferidosNodo2) {
+		this.individuosTransferidosNodo2 = individuosTransferidosNodo2;
+	}
+
+	/**
+	 * @return the individuosTranferidosNodo3
+	 */
+	public ArrayList<Individuo> getIndividuosTranferidosNodo3() {
+		return individuosTranferidosNodo3;
+	}
+
+	/**
+	 * @param individuosTranferidosNodo3 the individuosTranferidosNodo3 to set
+	 */
+	public void setIndividuosTranferidosNodo3(ArrayList<Individuo> individuosTranferidosNodo3) {
+		this.individuosTranferidosNodo3 = individuosTranferidosNodo3;
+	}
+
+	/**
+	 * @return the individuosTransferidosNodo4
+	 */
+	public ArrayList<Individuo> getIndividuosTransferidosNodo4() {
+		return individuosTransferidosNodo4;
+	}
+
+	/**
+	 * @param individuosTransferidosNodo4 the individuosTransferidosNodo4 to set
+	 */
+	public void setIndividuosTransferidosNodo4(ArrayList<Individuo> individuosTransferidosNodo4) {
+		this.individuosTransferidosNodo4 = individuosTransferidosNodo4;
+	}
+
+	/**
+	 * @return the individuosRemanentesNodo1
+	 */
+	public ArrayList<Individuo> getIndividuosRemanentesNodo1() {
+		return individuosRemanentesNodo1;
+	}
+
+	/**
+	 * @param individuosRemanentesNodo1 the individuosRemanentesNodo1 to set
+	 */
+	public void setIndividuosRemanentesNodo1(ArrayList<Individuo> individuosRemanentesNodo1) {
+		this.individuosRemanentesNodo1 = individuosRemanentesNodo1;
+	}
+
+	/**
+	 * @return the individuosRemanentesNodo2
+	 */
+	public ArrayList<Individuo> getIndividuosRemanentesNodo2() {
+		return individuosRemanentesNodo2;
+	}
+
+	/**
+	 * @param individuosRemanentesNodo2 the individuosRemanentesNodo2 to set
+	 */
+	public void setIndividuosRemanentesNodo2(ArrayList<Individuo> individuosRemanentesNodo2) {
+		this.individuosRemanentesNodo2 = individuosRemanentesNodo2;
+	}
+
+	/**
+	 * @return the individuosRemanentesNodo3
+	 */
+	public ArrayList<Individuo> getIndividuosRemanentesNodo3() {
+		return individuosRemanentesNodo3;
+	}
+
+	/**
+	 * @param individuosRemanentesNodo3 the individuosRemanentesNodo3 to set
+	 */
+	public void setIndividuosRemanentesNodo3(ArrayList<Individuo> individuosRemanentesNodo3) {
+		this.individuosRemanentesNodo3 = individuosRemanentesNodo3;
+	}
+
+	/**
+	 * @return the individuosRemanentesNodo4
+	 */
+	public ArrayList<Individuo> getIndividuosRemanentesNodo4() {
+		return individuosRemanentesNodo4;
+	}
+
+	/**
+	 * @param individuosRemanentesNodo4 the individuosRemanentesNodo4 to set
+	 */
+	public void setIndividuosRemanentesNodo4(ArrayList<Individuo> individuosRemanentesNodo4) {
+		this.individuosRemanentesNodo4 = individuosRemanentesNodo4;
+	}
 
 }

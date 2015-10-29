@@ -36,6 +36,11 @@ public class Individuo
 	private int ordenLlegada;
 	
 	/**
+	 * Indica si el individuo fue tranferido a su nodo destino
+	 */
+	private boolean transferido;
+	
+	/**
 	 * 
 	 */
 	private boolean destinoInalcanzable;
@@ -159,5 +164,21 @@ public class Individuo
 	 */
 	public void setDestinoInalcanzable(boolean destinoInalcanzable) {
 		this.destinoInalcanzable = destinoInalcanzable;
+	}
+
+
+	/**
+	 * @return the transferido
+	 */
+	public boolean isTransferido() {
+		return transferido;
+	}
+
+
+	/**
+	 * @param transferido the transferido to set
+	 */
+	public void setTransferido(boolean transferido) {
+		this.transferido = transferido;
 	}
 }

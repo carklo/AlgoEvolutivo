@@ -12,6 +12,8 @@ public class Central
 	 */
 	private ArrayList<Generacion> generaciones;
 	
+	
+	
 	/**
 	 * 
 	 * @param args
@@ -21,7 +23,10 @@ public class Central
 		
 	}
 
-
+	public int calcularCongestionNodoDestino(int nodoDestino)
+	{
+		return 0;
+	}
 
 	/**
 	 * @return the generaciones
