@@ -11,12 +11,18 @@ public class FuncionAdaptacion
 	
 	/**
 	 * 
+	 */
+	private Central central;
+	
+	/**
+	 * 
 	 * @param individuos
 	 * @param gen
 	 */
-	public FuncionAdaptacion(Generacion gen, int numGen)
+	public FuncionAdaptacion(Generacion gen, int numGen, Central cent)
 	{
 		generacionActual = gen;
+		setCentral(cent);
 	}
 	
 	/**
@@ -175,7 +181,7 @@ public class FuncionAdaptacion
 	/**
 	 * 
 	 */
-	public void calcularCongestionDestino()
+	public void calcularCongestionDestino(int nodoDestino)
 	{
 		marcarDestInalcanzables();
 		ArrayList<Individuo> indiNodo1 = generacionActual.getIndividuosNodo1();
@@ -183,12 +189,17 @@ public class FuncionAdaptacion
 		ArrayList<Individuo> indiNodo3 = generacionActual.getIndividuosNodo3();
 		ArrayList<Individuo> indiNodo4 = generacionActual.getIndividuosNodo4();
 		
+		//Congestion del nodo destino en el tiempo actual (numero de carros que estan 
+		// en el destino)
+		int congestionNodo = central.calcularCongestionNodoDestino(nodoDestino);
+		
 		
 	}
 	
 	public void calcularPenalizacion()
 	{
-		
+		//Se calcula la penalizacion para todos los nodos, penalizacion por destino inalcanzable
+		//y por ir destino inalcanzable
 	}
 	
 	public void marcarDestInalcanzables()
@@ -229,6 +240,20 @@ public class FuncionAdaptacion
 				individuo.setDestinoInalcanzable(true);
 			}
 		}
+	}
+
+	/**
+	 * @return the central
+	 */
+	public Central getCentral() {
+		return central;
+	}
+
+	/**
+	 * @param central the central to set
+	 */
+	public void setCentral(Central central) {
+		this.central = central;
 	}
 	
 	

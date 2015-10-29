@@ -60,7 +60,7 @@ public class Generacion
 	/**
 	 * 
 	 */
-	private ArrayList<Individuo> individuosTranferidosNodo3;
+	private ArrayList<Individuo> individuosTransferidosNodo3;
 	
 	/**
 	 * 
@@ -102,6 +102,13 @@ public class Generacion
 		individuosNodo2 = new ArrayList<>();
 		individuosNodo3 = new ArrayList<>();
 		individuosNodo4 = new ArrayList<>();
+		individuosTransferidosNodo1 = new ArrayList<>();
+		individuosTransferidosNodo2 = new ArrayList<>();
+		individuosTransferidosNodo3 = new ArrayList<>();
+		individuosRemanentesNodo1 = new ArrayList<>();
+		individuosRemanentesNodo2 = new ArrayList<>();
+		individuosRemanentesNodo3 = new ArrayList<>();
+		individuosRemanentesNodo4 = new ArrayList<>();
 		clasificarIndividuosOrigenDestino();
 		aplicarOrdenLlegada(individuosNodo1);
 		aplicarOrdenLlegada(individuosNodo2);
@@ -153,21 +160,55 @@ public class Generacion
 			{
 				if(individuo.isTransferido())
 				{
-					
+					individuosTransferidosNodo1.add(individuo);
+				}
+				else
+				{
+					individuosRemanentesNodo1.add(individuo);
 				}
 			}
 		}
 		else if(nodoOrigen == 2)
 		{
-			
+			for (Individuo individuo : individuosNodo2) 
+			{
+				if(individuo.isTransferido())
+				{
+					individuosTransferidosNodo2.add(individuo);
+				}
+				else
+				{
+					individuosRemanentesNodo2.add(individuo);
+				}
+			}
 		}
 		else if(nodoOrigen == 3)
 		{
-			
+			for (Individuo individuo : individuosNodo3)
+			{
+				if(individuo.isTransferido())
+				{
+					individuosTransferidosNodo3.add(individuo);
+				}
+				else
+				{
+					individuosRemanentesNodo3.add(individuo);
+				}
+			}
 		}
 		else
 		{
-			
+			for (Individuo individuo : individuosNodo4)
+			{
+				if(individuo.isTransferido())
+				{
+					individuosTransferidosNodo4.add(individuo);
+				}
+				else
+				{
+					individuosRemanentesNodo4.add(individuo);
+				}
+			}
 		}
 	}
 	
@@ -371,14 +412,14 @@ public class Generacion
 	 * @return the individuosTranferidosNodo3
 	 */
 	public ArrayList<Individuo> getIndividuosTranferidosNodo3() {
-		return individuosTranferidosNodo3;
+		return individuosTransferidosNodo3;
 	}
 
 	/**
 	 * @param individuosTranferidosNodo3 the individuosTranferidosNodo3 to set
 	 */
 	public void setIndividuosTranferidosNodo3(ArrayList<Individuo> individuosTranferidosNodo3) {
-		this.individuosTranferidosNodo3 = individuosTranferidosNodo3;
+		this.individuosTransferidosNodo3 = individuosTranferidosNodo3;
 	}
 
 	/**

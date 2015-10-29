@@ -43,6 +43,11 @@ public class Individuo
 	/**
 	 * 
 	 */
+	private boolean fueraDelSistema;
+	
+	/**
+	 * 
+	 */
 	private boolean destinoInalcanzable;
 
 	
@@ -50,6 +55,8 @@ public class Individuo
 	{
 		cromosoma = new int[Constantes.MAX_LONG];
 		destinoInalcanzable = false;
+		transferido = false;
+		fueraDelSistema = false;
 	}
 	
 
@@ -180,5 +187,21 @@ public class Individuo
 	 */
 	public void setTransferido(boolean transferido) {
 		this.transferido = transferido;
+	}
+
+
+	/**
+	 * @return the fueraDelSistema
+	 */
+	public boolean isFueraDelSistema() {
+		return fueraDelSistema;
+	}
+
+
+	/**
+	 * @param fueraDelSistema the fueraDelSistema to set
+	 */
+	public void setFueraDelSistema(boolean fueraDelSistema) {
+		this.fueraDelSistema = fueraDelSistema;
 	}
 }
